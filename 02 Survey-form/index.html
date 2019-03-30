@@ -1,0 +1,127 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<html>
+  <head>
+    <title>
+      Survey Form
+	</title>
+	<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1 id="title">Suvey Form</h1>
+    <div id="outer-form">
+      <p id="description">Let us know how we can improve freeCodeCamp<p>
+      <form id="survey-form" metod="GET" action="https://crossorigin.me/https://freecodecamp.com">
+        
+        <div class="row-tab">
+          <div class="label">
+            <label id="name-label">*Name : </label>
+          </div>
+          <div class="right-tab">
+            <input autofocus type="text" id="name" name="name" class="input-field" placeholder="Enter your Name" required>
+          </div>
+        </div>
+        
+        <div class="row-tab">
+          <div class="label">
+            <label id="email-label">*Email : </label>
+          </div>
+          <div class="right-tab">
+            <input type="email" id="email" name="email" pattern="[^ @]*@[^ @]*" class="input-field" placeholder="Enter your email" required>
+          </div>
+        </div>
+        
+        <div class="row-tab">
+          <div class="label">
+            <label id="number-label">*Age :</label>
+          </div>
+          <div class="right-tab">
+            <input type="number" name="age" min="1" max="125" class="input-field" id="number" placeholder="Age">
+          </div>
+        </div>
+        
+        <div class="row-tab">
+          <div class="label">
+            <label>Which option best describes your current role?</label>
+          </div>
+          <div class="right-tab">
+            <select id="dropdown" name="role" class="combo">
+              <option disabled value>Select an Option</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="learner">Full time Learner</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="row-tab">
+          <div class="label"><label>How likely is that you would recommend freeCodeCamp to a friend?</label>
+          </div>
+          <div class="right-tab">
+            <ul style="list-style:none;" class="input-field" name="recomendation">
+              <li><input type="radio" name="recom" value="definitely" class="radio">Definitely</li>
+              <li><input type="radio" name="recom" value="maybe" class="radio">Maybe</li>
+              <li><input type="radio" name="recom" value="NotSure" class="radio">Not Sure</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row-tab">
+          <div class="label"><label>What do you like most in FCC?</label>
+          </div>
+          <div class="right-tab">
+            <select class="combo" id="most-like" name="mostlike">
+              <option disabled selected value>-select an option-</option>
+              <option value="Challenges">Challenges</option>
+              <option value="Community">Community</option>
+              <option value="Projects">Projects</option>
+              <option value="OpenSource">Open Source</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="row-tab">
+          <div class="label"><label>Things that should be improved in future<br>(Check all that apply):</label>
+          </div>
+          <div class="right-tab">
+            <ul style="list-style:none;" id="preferences">
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="1">Front-end Projects</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="2">Back-end Projects</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="3">Data Visualization</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="4">Challenges</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="5">Open Source Community</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="6">Gitter help rooms</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="7">Videos</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="8">City meetups</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="9">Wiki</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="10">Forums</li>
+              <li class="checkbox"><input type="checkbox" name="prefer" class="userRatings" value="11">Additional Courses</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="row-tab">
+          <div class="label">
+            <label>Any coments or suggestions?</label>
+          </div>
+          <div class="right-tab">
+            <textarea id="comments" name="comment" style="height: 60px; resize: vertical;" placeholder="Enter your comments here..."></textarea>
+          </div>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+    
+  </body>
+</html>

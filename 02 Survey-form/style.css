@@ -1,0 +1,86 @@
+body {
+	padding:0;
+	margin:0;
+	background: #B3FFAB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #12FFF7, #B3FFAB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+	font-family: 'Raleway', Helvetica, sans-serif;
+  }
+  #outer-form {
+	width: 80%;
+	margin:auto;
+	background: #fff;
+	border-radius: 10px;
+	padding-top: 1em;
+	padding-bottom: 2em;
+	text-align: center;
+	margin-bottom: 2em;
+	max-width: 900px;
+  }
+  #title, #description {
+	text-align: center;
+  }
+  .row-tab {
+	margin-bottom: 1em;
+  }
+  .label {
+	display: inline-block;
+	text-align: right;
+	vertical-align: top;
+	width: 40%;
+	padding-right: 0.5em;
+  }
+  .right-tab {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+	width: 48%;
+  }
+  .input-field {
+	height: 2.5em;
+	width: 200px;
+  }
+  li {
+	position: relative;
+	left: -2.6em;
+  }
+  .radio, .userRatings {
+	margin-right: 10px;
+	margin-bottom: 5px;
+  }
+  ul {
+	margin-top: 0;
+  }
+  .combo {
+	height: 3em;
+	width: 200px;
+  }
+  textarea {
+	width: 200px;
+  }
+  #submit {
+	height: 50px;
+	width: 100px;
+	border-radius: 5px;
+	background-color: #59ace0;
+	color: #fff;
+	font-size: 0.9em;
+	margin-bottom: 1em;
+  }
+  @media screen and (max-width: 520px) {
+	#outer-form {
+	  padding: 2em 2em 0 2em;
+	}
+	.right-tab {
+	  width: 90%;
+	  margin-top: 0.5em;
+	}
+	.input-field, .combo, textarea {
+	  width: 100%;
+	}
+	.label {
+	  width: 90%;
+	  text-align: left;
+	}
+  }

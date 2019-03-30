@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Karla|Acme|Cinzel|Comfortaa');
+body {
+	margin: 0;
+	padding: 0;
+	background: #FDF5E6;
+	overflow: none;
+}
+#navbar {
+	width: 310px;
+	/*background: #317589;*/
+	background: #044f67;
+	height: 100%;
+	position: fixed;
+	overflow: -moz-scrollbars-none;
+}
+#navbar::-webkit-scrollbar{
+	width: 0;
+}
+#logo {
+	height: 75px;
+	display: block;
+	margin: auto;
+	margin-bottom: 5px;
+}
+nav a, nav header {
+	text-decoration: none;
+	color: #FDF5E6;
+}
+nav header {
+	text-align: center;
+	font-size: 2em;
+	padding-top: 1em;
+	margin-bottom: 0.5em;
+	font-family: 'Cinzel', cursive;
+}
+nav ul {
+	padding: 0;
+}
+nav li {
+	list-style: none;
+	padding: 10px;
+	padding-left: 1em;
+	font-family: 'comfortaa', sans-serif;
+	font-size: 13px;
+	/*border-bottom: 1px solid #48929B;*/
+}
+nav li:hover {
+	background: #48929B;
+	color: #FDF5E6;
+}
+.nav-link:after {
+	content: "";
+	height: 0;
+	width: 95%;
+	margin: auto;
+	border-bottom: 1px solid #48929B;
+	display: block;
+}
+#main-doc {
+	position: absolute;
+	margin: 0 2em 2em 340px;
+	/*margin: 0 2em 2em 0;*/
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.7;
+}
+#main-doc h2 {
+	margin-top: 1em;
+	padding-top: 1em;
+	font-family: 'Karla', sans-serif;
+	font-size: 30px;
+}
+.active {
+	background: #FDF5E6;
+	color: #044F67;
+}
+.active:hover {
+	background: #FDF5E6;
+	color: #044F67;
+}
+code {
+	background: #bebebe;
+	padding: 0.6em 1em;
+	border-radius: 10px;
+	/*probably not mine*/
+	display: block;
+	white-space: pre;
+	word-wrap: normal;
+	word-break: normal;
+	line-height: 1.7;
+	font-size: 12px;
+}
+
+
+/*------media queries-------*/
+@media (max-width: 1000px) {
+	nav header {
+		font-size: 1.5em;
+		padding-top: 1em;
+		margin-bottom: 0.5em;
+	}
+	#navbar {
+		width: 250px;
+	}
+	#main-doc {
+		margin-left: 280px;
+	}
+}
+@media (max-width: 630px) {
+	#navbar {
+		position: absolute;
+		top: 0;
+		height: 400px;
+		width: 100%;
+		overflow-y: auto;
+		display: block;
+	}
+	#main-doc {
+		position: relative;
+		width: 90%;
+		margin: auto;
+		margin-top: 400px;
+		padding: 15px;
+		overflow-x: none;
+	}
+}
