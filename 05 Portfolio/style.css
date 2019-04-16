@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body {
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+#navbar {
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: right;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+#navbar ul {
+	list-style-type: none;
+	padding: 0;
+}
+#navbar ul li {
+	color: #FAEBD7;
+	display: inline;
+	margin: 0 5em 0 0;
+}
+a {
+	text-decoration: none;
+}
+#welcome-section {
+	min-height: 55vh;
+	padding-top: 45vh;
+	width: 100%;
+	display: block;
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color: #FAEBD7;
+	line-height: 0.5;
+}
+#welcome-section p {
+	font-size: 14px;
+}
+
+#projects {	
+	padding: 5em 0;
+	margin: auto;
+	margin-top: 10vh;
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#tribute-page {
+	background-image: url(imgs/tribute-page.png);
+}
+#survey-form {
+	background-image: url(imgs/survey-form.png);
+}
+#product {
+	background-image: url(imgs/product-landing-page.png);
+}
+#tech-doc {
+	background-image: url(imgs/technical-documentation.png);
+}
+.placeholder {
+	background-image: url(https://via.placeholder.com/300x200.png);
+}
+.project-tile {
+	background-repeat: no-repeat;
+	border: 1px solid #2C5364;
+	margin-top: 3em;
+	height: 240px;
+	width: 300px;
+	color: #fff;
+	display: grid;
+}
+.project-tile p {
+	margin: 0;
+	padding: 0;
+	align-self: flex-end;
+	color: black;
+	margin-bottom: 0.5em;
+	padding-top: 11px;;
+	border-top: 1px solid black;
+}
+#contact {	
+	margin: auto;
+	margin-top: 20vh;
+	width: 99vw;
+	height: 90vh;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	align-items: center;
+}
+.header {
+	position: relative;
+	color: #FAEBD7;
+}
+.contact-details {
+	background-color: #FAEBD7;
+	height: 110px;
+	width: 110px;
+	color: #0F2027;
+	line-height: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+}
+#contact a::after {
+	content: "";
+	position: absolute;
+	height: 112px;
+	width: 112px;
+	border: 1px #FAEBD7 solid;
+	border-radius: 100%;
+}
+/*media queries*/
+@media (max-width: 1070px) {
+	.header {
+		align-self: flex-start;
+		margin: 100px 0 0 0;
+		grid-area: header;
+		margin-bottom: 0;
+	}
+	#contact {
+		display: grid;
+		grid-template-areas: 
+			"header header header header header"
+			"detail1 detail2 detail3 detail4 detail5";
+		grid-row-gap: 10px;
+	}
+	#facebook {
+		grid-area: detail1;
+	}
+	#github {
+		grid-area: detail2;
+	}
+	#twitter {
+		grid-area: detail3;
+	}
+	#mail {
+		grid-area: detail4;
+	}
+	#phone {
+		grid-area: detail5;
+	}
+}
+
+@media (max-width: 595px) {
+	.header {
+		margin: 100px 0 0 0;
+		grid-area: header;
+		margin-bottom: 0;
+	}
+	#contact {
+		display: grid;
+		grid-template-areas: 
+			"header header"
+			"detail1 detail2"
+			"detail3 detail4"
+			"detail5 none";
+		padding-bottom: 2em;
+	}
+	.contact-details {
+		height: 80px;
+		width: 80px;
+		font-size: 14px;
+		line-height: 16px;
+	}
+	#contact a::after {
+		height: 82px;
+		width: 82px;
+	}
+	#navbar {
+		text-align: center;
+	}
+	#navbar ul li {
+		margin: 0 1em 0 1em;
+	}
+}
